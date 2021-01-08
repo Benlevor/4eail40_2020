@@ -1,9 +1,12 @@
-package board
+epackage board
 
 import (
+	
+	"github.com/Benlevor/4eail40_2020/exercises/chess/model/coord"
+	"github.com/Benlevor/4eail40_2020/exercises/chess/model/piece"
+	"github.com/Benlevor/4eail40_2020/exercises/chess/model/player"
 	"testing"
-
-	"github.com/jglouis/4eail40_2020/exercises/chess/model/coord"
+	"reflect"
 )
 
 type mockCoord int
@@ -101,11 +104,4 @@ func TestClassic_MovePiece(t *testing.T) {
 			false,
 		},
 	}
-	for _, tt := range tests {
-		t.Run(tt.name, func(t *testing.T) {
-			if err := tt.c.MovePiece(tt.args.from, tt.args.to); (err != nil) != tt.wantErr {
-				t.Errorf("Classic.MovePiece() error = %v, wantErr %v", err, tt.wantErr)
-			}
-		})
-	}
-}
+	for _, tt := range tests 
